@@ -1,9 +1,8 @@
 # what is temporal dead zone? 💀
-✅ TDZ is the duration since let variables are hoisted and till it is initialized a value. It is a separate space where let variables are allocated undefined in the memory component till the
-time they get initialized
+✅ TDZ is the duration since let variables are hoisted till it is initialized a value. It is a separate space where let variables are allocated undefined in the memory component till the time they get initialized
 
 # for which variables TDZ is valid? 🤔
-✅ for variables declared with let but not initialized
+✅ for variables declared with const and let but not initialized
 
 # what happens if we try to access a variable inside TDZ? 😵
 ✅ we get a ReferenceError saying "cannot access x before initialization". means we cannot access the variables in the TDZ and can only be accessed once some value is assigned to it
@@ -17,8 +16,7 @@ can be accessed without initialization<br>
 ✅ let/const variables are not attached to global window object while var variables are by default attached to global window object
 
 # are variables declared with let/const hoisted? 😛
-✅ yes they are hoisted. but we cannot access them directly nor we'll get undefined unlike var variables because they are placed in a separate memory space aka TDZ
+✅ yes they are hoisted. but we cannot access them directly nor we'll get undefined unlike var variables because they are placed in a separate memory space reseved for the current block aka TDZ
 
 # how we can avoid TDZ and unexpected undefined errors? 🧐
-✅ the idea is to shrink the TDZ window to 0. To achieve this put all the variable declarations and declarations at the top of the current scope. with this we make sure that the code first
-encounters these variables before trying to access them
+✅ the idea is to shrink the TDZ window to 0. To achieve this put all the variable declarations and declarations at the top of the current scope. with this we ensure that code first encounters these variables before trying to access them
