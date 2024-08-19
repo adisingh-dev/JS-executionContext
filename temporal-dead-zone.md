@@ -1,5 +1,7 @@
 # what is temporal dead zone? 💀
-✅ TDZ is the duration since let variables are hoisted till it is initialized a value. It is a separate space where let variables are allocated undefined in the memory component till the time they get initialized
+✅ TDZ is the duration since let variables are hoisted till it is initialized a value. It is a separate space where let variables are allocated undefined in the memory component 
+till the time they get initialized. Inside a block (e.g., {}, if, for, while), variables declared with let or const have a TDZ that is part of the block's execution context.In
+Chrome DevTools, when you inspect such a block, the TDZ is denoted within that specific block scope
 
 # for which variables TDZ is valid? 🤔
 ✅ for variables declared with const and let but not initialized
@@ -20,3 +22,8 @@ can be accessed without initialization<br>
 
 # how we can avoid TDZ and unexpected undefined errors? 🧐
 ✅ the idea is to shrink the TDZ window to 0. To achieve this put all the variable declarations and declarations at the top of the current scope. with this we ensure that code first encounters these variables before trying to access them
+
+# when do we get SyntaxError, ReferenceError and TypeError in JS?
+✅ ReferenceError: while trying to access variables in TDZ or before declaration
+✅ SyntaxError: while trying to declare let variables again and missed initialization while declaring const variables
+✅ TypeError: while reinitializing const variables
