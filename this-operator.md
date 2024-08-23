@@ -3,10 +3,10 @@
 this operator behaves differently in different scenarios
 
 # what is the global object in browser and in nodejs?
-✅ browser: window object
+✅ browser: window object<br>
 ✅ nodejs: empty global object {}
 
-in which mode this substitution occurs?
+# in which mode this substitution occurs?
 ✅ in non strict mode only
 
 # what is this substitution?
@@ -19,7 +19,8 @@ any object's own method
 # how does this keyword behaves inside a fn in strict and non strict mode?
 ✅ In a fn the value of this depends on strict / non strict mode<br>
 ✅ In non strict mode this substitution will occur<br>
-✅ In strict mode the value of this depends on how this fn is called eg. if we call a fn x() then in strict mode this will be undefined but in case of window.x() this will point to window
+✅ In strict mode the value of this depends on how this fn is called eg. if we call a fn x() then in strict mode this will be undefined but in case of window.x() this will point to window<br>
+✅ In case of of an object calling one of its method then this will point to that object itself
 
 # what is enclosing lexical context?
 ✅ lexical means where something is written in the code heirarchy. so lexical context is the component in the memory phase of the current EC that contains the reference to the parent's EC
